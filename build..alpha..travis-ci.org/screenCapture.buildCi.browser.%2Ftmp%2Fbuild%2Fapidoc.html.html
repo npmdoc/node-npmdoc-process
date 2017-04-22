@@ -1,0 +1,4577 @@
+<html><head></head><body><div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a href="https://github.com/shtylman/node-process#readme">process (v0.11.9)</a>
+</h1>
+<h4>process information for node.js and browsers</h4>
+<div class="apidocSectionDiv"><a href="#apidoc.tableOfContents" id="apidoc.tableOfContents"><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.process">module process</a><ol>
+
+        <li>
+
+            <span class="apidocSignatureSpan">boolean <span class="apidocSignatureSpan">process.</span>_exiting</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">boolean <span class="apidocSignatureSpan">process.</span>_needImmediateCallback</span>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.process._debugEnd">
+            function <span class="apidocSignatureSpan">process.</span>_debugEnd
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.process._debugPause">
+            function <span class="apidocSignatureSpan">process.</span>_debugPause
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.process._debugProcess">
+            function <span class="apidocSignatureSpan">process.</span>_debugProcess
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.process._fatalException">
+            function <span class="apidocSignatureSpan">process.</span>_fatalException
+            <span class="apidocSignatureSpan">(er)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.process._getActiveHandles">
+            function <span class="apidocSignatureSpan">process.</span>_getActiveHandles
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.process._getActiveRequests">
+            function <span class="apidocSignatureSpan">process.</span>_getActiveRequests
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.process._kill">
+            function <span class="apidocSignatureSpan">process.</span>_kill
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.process._linkedBinding">
+            function <span class="apidocSignatureSpan">process.</span>_linkedBinding
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.process._rawDebug">
+            function <span class="apidocSignatureSpan">process.</span>_rawDebug
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.process._startProfilerIdleNotifier">
+            function <span class="apidocSignatureSpan">process.</span>_startProfilerIdleNotifier
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.process._stopProfilerIdleNotifier">
+            function <span class="apidocSignatureSpan">process.</span>_stopProfilerIdleNotifier
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.process._tickCallback">
+            function <span class="apidocSignatureSpan">process.</span>_tickCallback
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.process._tickDomainCallback">
+            function <span class="apidocSignatureSpan">process.</span>_tickDomainCallback
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.process.abort">
+            function <span class="apidocSignatureSpan">process.</span>abort
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.process.assert">
+            function <span class="apidocSignatureSpan">process.</span>assert
+            <span class="apidocSignatureSpan">(x, msg)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.process.binding">
+            function <span class="apidocSignatureSpan">process.</span>binding
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.process.chdir">
+            function <span class="apidocSignatureSpan">process.</span>chdir
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.process.cpuUsage">
+            function <span class="apidocSignatureSpan">process.</span>cpuUsage
+            <span class="apidocSignatureSpan">(prevValue)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.process.cwd">
+            function <span class="apidocSignatureSpan">process.</span>cwd
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.process.dlopen">
+            function <span class="apidocSignatureSpan">process.</span>dlopen
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.process.emitWarning">
+            function <span class="apidocSignatureSpan">process.</span>emitWarning
+            <span class="apidocSignatureSpan">(warning, name, ctor)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.process.exit">
+            function <span class="apidocSignatureSpan">process.</span>exit
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.process.getegid">
+            function <span class="apidocSignatureSpan">process.</span>getegid
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.process.geteuid">
+            function <span class="apidocSignatureSpan">process.</span>geteuid
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.process.getgid">
+            function <span class="apidocSignatureSpan">process.</span>getgid
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.process.getgroups">
+            function <span class="apidocSignatureSpan">process.</span>getgroups
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.process.getuid">
+            function <span class="apidocSignatureSpan">process.</span>getuid
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.process.hrtime">
+            function <span class="apidocSignatureSpan">process.</span>hrtime
+            <span class="apidocSignatureSpan">(ar)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.process.initgroups">
+            function <span class="apidocSignatureSpan">process.</span>initgroups
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.process.kill">
+            function <span class="apidocSignatureSpan">process.</span>kill
+            <span class="apidocSignatureSpan">(pid, sig)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.process.memoryUsage">
+            function <span class="apidocSignatureSpan">process.</span>memoryUsage
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.process.nextTick">
+            function <span class="apidocSignatureSpan">process.</span>nextTick
+            <span class="apidocSignatureSpan">(callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.process.openStdin">
+            function <span class="apidocSignatureSpan">process.</span>openStdin
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.process.reallyExit">
+            function <span class="apidocSignatureSpan">process.</span>reallyExit
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.process.setegid">
+            function <span class="apidocSignatureSpan">process.</span>setegid
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.process.seteuid">
+            function <span class="apidocSignatureSpan">process.</span>seteuid
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.process.setgid">
+            function <span class="apidocSignatureSpan">process.</span>setgid
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.process.setgroups">
+            function <span class="apidocSignatureSpan">process.</span>setgroups
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.process.setuid">
+            function <span class="apidocSignatureSpan">process.</span>setuid
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.process.umask">
+            function <span class="apidocSignatureSpan">process.</span>umask
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.process.uptime">
+            function <span class="apidocSignatureSpan">process.</span>uptime
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">process.</span>_eventsCount</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">process.</span>debugPort</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">process.</span>pid</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">process.</span>_events</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">process.</span>_events.SIGWINCH</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">process.</span>_events.uncaughtException</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">process.</span>argv</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">process.</span>browser</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">process.</span>config</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">process.</span>domain</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">process.</span>execArgv</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">process.</span>features</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">process.</span>mainModule</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">process.</span>moduleLoadList</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">process.</span>release</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">process.</span>stderr</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">process.</span>stderr._events</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">process.</span>stderr._handle</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">process.</span>stderr._writableState</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">process.</span>stdin</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">process.</span>stdin._events</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">process.</span>stdin._handle</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">process.</span>stdin._writableState</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">process.</span>stdout</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">process.</span>stdout._events</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">process.</span>stdout._handle</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">process.</span>stdout._writableState</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">process.</span>versions</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">process.</span>arch</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">process.</span>argv0</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">process.</span>execPath</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">process.</span>platform</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">process.</span>title</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">process.</span>version</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.process._events">module process._events</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.process._events.newListener">
+            function <span class="apidocSignatureSpan">process._events.</span>newListener
+            <span class="apidocSignatureSpan">(type, listener)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.process._events.removeListener">
+            function <span class="apidocSignatureSpan">process._events.</span>removeListener
+            <span class="apidocSignatureSpan">(type, listener)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.process._events.warning">
+            function <span class="apidocSignatureSpan">process._events.</span>warning
+            <span class="apidocSignatureSpan">(warning)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">process._events.</span>SIGWINCH</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">process._events.</span>uncaughtException</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.process._events.SIGWINCH">module process._events.SIGWINCH</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.process._events.SIGWINCH.0">
+            function <span class="apidocSignatureSpan">process._events.SIGWINCH.</span>0
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.process._events.SIGWINCH.1">
+            function <span class="apidocSignatureSpan">process._events.SIGWINCH.</span>1
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.process._events.uncaughtException">module process._events.uncaughtException</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.process._events.uncaughtException.0">
+            function <span class="apidocSignatureSpan">process._events.uncaughtException.</span>0
+            <span class="apidocSignatureSpan">(error)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.process._events.uncaughtException.1">
+            function <span class="apidocSignatureSpan">process._events.uncaughtException.</span>1
+            <span class="apidocSignatureSpan">(error)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.process.browser">module process.browser</a><ol>
+
+        <li>
+
+            <span class="apidocSignatureSpan">boolean <span class="apidocSignatureSpan">process.</span>browser</span>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.process.browser.addListener">
+            function <span class="apidocSignatureSpan">process.browser.</span>addListener
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.process.browser.binding">
+            function <span class="apidocSignatureSpan">process.browser.</span>binding
+            <span class="apidocSignatureSpan">(name)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.process.browser.chdir">
+            function <span class="apidocSignatureSpan">process.browser.</span>chdir
+            <span class="apidocSignatureSpan">(dir)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.process.browser.cwd">
+            function <span class="apidocSignatureSpan">process.browser.</span>cwd
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.process.browser.emit">
+            function <span class="apidocSignatureSpan">process.browser.</span>emit
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.process.browser.nextTick">
+            function <span class="apidocSignatureSpan">process.browser.</span>nextTick
+            <span class="apidocSignatureSpan">(fun)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.process.browser.off">
+            function <span class="apidocSignatureSpan">process.browser.</span>off
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.process.browser.on">
+            function <span class="apidocSignatureSpan">process.browser.</span>on
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.process.browser.once">
+            function <span class="apidocSignatureSpan">process.browser.</span>once
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.process.browser.removeAllListeners">
+            function <span class="apidocSignatureSpan">process.browser.</span>removeAllListeners
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.process.browser.removeListener">
+            function <span class="apidocSignatureSpan">process.browser.</span>removeListener
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.process.browser.umask">
+            function <span class="apidocSignatureSpan">process.browser.</span>umask
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">process.browser.</span>argv</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">process.browser.</span>env</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">process.browser.</span>versions</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">process.browser.</span>title</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">process.browser.</span>version</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.process.stderr">module process.stderr</a><ol>
+
+        <li>
+
+            <span class="apidocSignatureSpan">boolean <span class="apidocSignatureSpan">process.stderr.</span>_hadError</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">boolean <span class="apidocSignatureSpan">process.stderr.</span>_isStdio</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">boolean <span class="apidocSignatureSpan">process.stderr.</span>allowHalfOpen</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">boolean <span class="apidocSignatureSpan">process.stderr.</span>connecting</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">boolean <span class="apidocSignatureSpan">process.stderr.</span>destroyed</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">boolean <span class="apidocSignatureSpan">process.stderr.</span>readable</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">boolean <span class="apidocSignatureSpan">process.stderr.</span>writable</span>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.process.stderr.destroy">
+            function <span class="apidocSignatureSpan">process.stderr.</span>destroy
+            <span class="apidocSignatureSpan">(er)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.process.stderr.destroySoon">
+            function <span class="apidocSignatureSpan">process.stderr.</span>destroySoon
+            <span class="apidocSignatureSpan">(er)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">process.stderr.</span>_bytesDispatched</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">process.stderr.</span>_eventsCount</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">process.stderr.</span>columns</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">process.stderr.</span>fd</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">process.stderr.</span>rows</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">process.stderr.</span>_events</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">process.stderr.</span>_handle</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">process.stderr.</span>_host</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">process.stderr.</span>_parent</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">process.stderr.</span>_pendingData</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">process.stderr.</span>_readableState</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">process.stderr.</span>_server</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">process.stderr.</span>_sockname</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">process.stderr.</span>_writableState</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">process.stderr.</span>_writev</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">process.stderr.</span>domain</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">process.stderr.</span>server</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">process.stderr.</span>_pendingEncoding</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">process.stderr.</span>_type</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.process.stderr._events">module process.stderr._events</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.process.stderr._events._socketEnd">
+            function <span class="apidocSignatureSpan">process.stderr._events.</span>_socketEnd
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.process.stderr._events.end">
+            function <span class="apidocSignatureSpan">process.stderr._events.</span>end
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.process.stderr._events.finish">
+            function <span class="apidocSignatureSpan">process.stderr._events.</span>finish
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.process.stderr._handle">module process.stderr._handle</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.process.stderr._handle.onread">
+            function <span class="apidocSignatureSpan">process.stderr._handle.</span>onread
+            <span class="apidocSignatureSpan">(nread, buffer)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">process.stderr._handle.</span>bytesRead</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">process.stderr._handle.</span>fd</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">process.stderr._handle.</span>writeQueueSize</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">process.stderr._handle.</span>_externalStream</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">process.stderr._handle.</span>owner</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.process.stderr._writableState">module process.stderr._writableState</a><ol>
+
+        <li>
+
+            <span class="apidocSignatureSpan">boolean <span class="apidocSignatureSpan">process.stderr._writableState.</span>bufferProcessing</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">boolean <span class="apidocSignatureSpan">process.stderr._writableState.</span>decodeStrings</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">boolean <span class="apidocSignatureSpan">process.stderr._writableState.</span>ended</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">boolean <span class="apidocSignatureSpan">process.stderr._writableState.</span>ending</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">boolean <span class="apidocSignatureSpan">process.stderr._writableState.</span>errorEmitted</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">boolean <span class="apidocSignatureSpan">process.stderr._writableState.</span>finished</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">boolean <span class="apidocSignatureSpan">process.stderr._writableState.</span>needDrain</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">boolean <span class="apidocSignatureSpan">process.stderr._writableState.</span>objectMode</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">boolean <span class="apidocSignatureSpan">process.stderr._writableState.</span>prefinished</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">boolean <span class="apidocSignatureSpan">process.stderr._writableState.</span>sync</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">boolean <span class="apidocSignatureSpan">process.stderr._writableState.</span>writing</span>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.process.stderr._writableState.onwrite">
+            function <span class="apidocSignatureSpan">process.stderr._writableState.</span>onwrite
+            <span class="apidocSignatureSpan">(er)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">process.stderr._writableState.</span>bufferedRequestCount</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">process.stderr._writableState.</span>corked</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">process.stderr._writableState.</span>highWaterMark</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">process.stderr._writableState.</span>length</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">process.stderr._writableState.</span>pendingcb</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">process.stderr._writableState.</span>writelen</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">process.stderr._writableState.</span>bufferedRequest</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">process.stderr._writableState.</span>corkedRequestsFree</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">process.stderr._writableState.</span>lastBufferedRequest</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">process.stderr._writableState.</span>writecb</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">process.stderr._writableState.</span>defaultEncoding</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.process.stdin">module process.stdin</a><ol>
+
+        <li>
+
+            <span class="apidocSignatureSpan">boolean <span class="apidocSignatureSpan">process.stdin.</span>_consuming</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">boolean <span class="apidocSignatureSpan">process.stdin.</span>_hadError</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">boolean <span class="apidocSignatureSpan">process.stdin.</span>allowHalfOpen</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">boolean <span class="apidocSignatureSpan">process.stdin.</span>connecting</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">boolean <span class="apidocSignatureSpan">process.stdin.</span>destroyed</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">boolean <span class="apidocSignatureSpan">process.stdin.</span>isRaw</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">boolean <span class="apidocSignatureSpan">process.stdin.</span>isTTY</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">boolean <span class="apidocSignatureSpan">process.stdin.</span>readable</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">boolean <span class="apidocSignatureSpan">process.stdin.</span>writable</span>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.process.stdin.read">
+            function <span class="apidocSignatureSpan">process.stdin.</span>read
+            <span class="apidocSignatureSpan">(n)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">process.stdin.</span>_bytesDispatched</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">process.stdin.</span>_eventsCount</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">process.stdin.</span>fd</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">process.stdin.</span>_events</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">process.stdin.</span>_handle</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">process.stdin.</span>_host</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">process.stdin.</span>_parent</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">process.stdin.</span>_pendingData</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">process.stdin.</span>_readableState</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">process.stdin.</span>_server</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">process.stdin.</span>_sockname</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">process.stdin.</span>_writableState</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">process.stdin.</span>_writev</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">process.stdin.</span>domain</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">process.stdin.</span>server</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">process.stdin.</span>_pendingEncoding</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.process.stdin._events">module process.stdin._events</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.process.stdin._events._socketEnd">
+            function <span class="apidocSignatureSpan">process.stdin._events.</span>_socketEnd
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.process.stdin._events.data">
+            function <span class="apidocSignatureSpan">process.stdin._events.</span>data
+            <span class="apidocSignatureSpan">(b)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.process.stdin._events.finish">
+            function <span class="apidocSignatureSpan">process.stdin._events.</span>finish
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.process.stdin._events.keypress">
+            function <span class="apidocSignatureSpan">process.stdin._events.</span>keypress
+            <span class="apidocSignatureSpan">(s, key)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.process.stdin._events.pause">
+            function <span class="apidocSignatureSpan">process.stdin._events.</span>pause
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">process.stdin._events.</span>end</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.process.stdin._handle">module process.stdin._handle</a><ol>
+
+        <li>
+
+            <span class="apidocSignatureSpan">boolean <span class="apidocSignatureSpan">process.stdin._handle.</span>reading</span>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.process.stdin._handle.onread">
+            function <span class="apidocSignatureSpan">process.stdin._handle.</span>onread
+            <span class="apidocSignatureSpan">(nread, buffer)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">process.stdin._handle.</span>bytesRead</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">process.stdin._handle.</span>fd</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">process.stdin._handle.</span>writeQueueSize</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">process.stdin._handle.</span>_externalStream</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">process.stdin._handle.</span>owner</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.process.stdin._writableState">module process.stdin._writableState</a><ol>
+
+        <li>
+
+            <span class="apidocSignatureSpan">boolean <span class="apidocSignatureSpan">process.stdin._writableState.</span>bufferProcessing</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">boolean <span class="apidocSignatureSpan">process.stdin._writableState.</span>decodeStrings</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">boolean <span class="apidocSignatureSpan">process.stdin._writableState.</span>ended</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">boolean <span class="apidocSignatureSpan">process.stdin._writableState.</span>ending</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">boolean <span class="apidocSignatureSpan">process.stdin._writableState.</span>errorEmitted</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">boolean <span class="apidocSignatureSpan">process.stdin._writableState.</span>finished</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">boolean <span class="apidocSignatureSpan">process.stdin._writableState.</span>needDrain</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">boolean <span class="apidocSignatureSpan">process.stdin._writableState.</span>objectMode</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">boolean <span class="apidocSignatureSpan">process.stdin._writableState.</span>prefinished</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">boolean <span class="apidocSignatureSpan">process.stdin._writableState.</span>sync</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">boolean <span class="apidocSignatureSpan">process.stdin._writableState.</span>writing</span>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.process.stdin._writableState.onwrite">
+            function <span class="apidocSignatureSpan">process.stdin._writableState.</span>onwrite
+            <span class="apidocSignatureSpan">(er)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">process.stdin._writableState.</span>bufferedRequestCount</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">process.stdin._writableState.</span>corked</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">process.stdin._writableState.</span>highWaterMark</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">process.stdin._writableState.</span>length</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">process.stdin._writableState.</span>pendingcb</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">process.stdin._writableState.</span>writelen</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">process.stdin._writableState.</span>bufferedRequest</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">process.stdin._writableState.</span>corkedRequestsFree</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">process.stdin._writableState.</span>lastBufferedRequest</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">process.stdin._writableState.</span>writecb</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">process.stdin._writableState.</span>defaultEncoding</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.process.stdout">module process.stdout</a><ol>
+
+        <li>
+
+            <span class="apidocSignatureSpan">boolean <span class="apidocSignatureSpan">process.stdout.</span>_hadError</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">boolean <span class="apidocSignatureSpan">process.stdout.</span>_isStdio</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">boolean <span class="apidocSignatureSpan">process.stdout.</span>allowHalfOpen</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">boolean <span class="apidocSignatureSpan">process.stdout.</span>connecting</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">boolean <span class="apidocSignatureSpan">process.stdout.</span>destroyed</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">boolean <span class="apidocSignatureSpan">process.stdout.</span>readable</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">boolean <span class="apidocSignatureSpan">process.stdout.</span>writable</span>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.process.stdout._write">
+            function <span class="apidocSignatureSpan">process.stdout.</span>_write
+            <span class="apidocSignatureSpan">(chunk, encoding, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.process.stdout._writeDefault">
+            function <span class="apidocSignatureSpan">process.stdout.</span>_writeDefault
+            <span class="apidocSignatureSpan">(data, encoding, cb)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.process.stdout.destroy">
+            function <span class="apidocSignatureSpan">process.stdout.</span>destroy
+            <span class="apidocSignatureSpan">(er)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.process.stdout.destroySoon">
+            function <span class="apidocSignatureSpan">process.stdout.</span>destroySoon
+            <span class="apidocSignatureSpan">(er)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">process.stdout.</span>_bytesDispatched</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">process.stdout.</span>_eventsCount</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">process.stdout.</span>columns</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">process.stdout.</span>fd</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">process.stdout.</span>rows</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">process.stdout.</span>_events</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">process.stdout.</span>_handle</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">process.stdout.</span>_host</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">process.stdout.</span>_parent</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">process.stdout.</span>_pendingData</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">process.stdout.</span>_readableState</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">process.stdout.</span>_server</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">process.stdout.</span>_sockname</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">process.stdout.</span>_writableState</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">process.stdout.</span>_writev</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">process.stdout.</span>domain</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">process.stdout.</span>server</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">process.stdout.</span>_pendingEncoding</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">process.stdout.</span>_type</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.process.stdout._events">module process.stdout._events</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.process.stdout._events._socketEnd">
+            function <span class="apidocSignatureSpan">process.stdout._events.</span>_socketEnd
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.process.stdout._events.end">
+            function <span class="apidocSignatureSpan">process.stdout._events.</span>end
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.process.stdout._events.finish">
+            function <span class="apidocSignatureSpan">process.stdout._events.</span>finish
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.process.stdout._events.resize">
+            function <span class="apidocSignatureSpan">process.stdout._events.</span>resize
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.process.stdout._handle">module process.stdout._handle</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.process.stdout._handle.onread">
+            function <span class="apidocSignatureSpan">process.stdout._handle.</span>onread
+            <span class="apidocSignatureSpan">(nread, buffer)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">process.stdout._handle.</span>bytesRead</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">process.stdout._handle.</span>fd</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">process.stdout._handle.</span>writeQueueSize</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">process.stdout._handle.</span>_externalStream</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">process.stdout._handle.</span>owner</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.process.stdout._writableState">module process.stdout._writableState</a><ol>
+
+        <li>
+
+            <span class="apidocSignatureSpan">boolean <span class="apidocSignatureSpan">process.stdout._writableState.</span>bufferProcessing</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">boolean <span class="apidocSignatureSpan">process.stdout._writableState.</span>decodeStrings</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">boolean <span class="apidocSignatureSpan">process.stdout._writableState.</span>ended</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">boolean <span class="apidocSignatureSpan">process.stdout._writableState.</span>ending</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">boolean <span class="apidocSignatureSpan">process.stdout._writableState.</span>errorEmitted</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">boolean <span class="apidocSignatureSpan">process.stdout._writableState.</span>finished</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">boolean <span class="apidocSignatureSpan">process.stdout._writableState.</span>needDrain</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">boolean <span class="apidocSignatureSpan">process.stdout._writableState.</span>objectMode</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">boolean <span class="apidocSignatureSpan">process.stdout._writableState.</span>prefinished</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">boolean <span class="apidocSignatureSpan">process.stdout._writableState.</span>sync</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">boolean <span class="apidocSignatureSpan">process.stdout._writableState.</span>writing</span>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.process.stdout._writableState.onwrite">
+            function <span class="apidocSignatureSpan">process.stdout._writableState.</span>onwrite
+            <span class="apidocSignatureSpan">(er)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">process.stdout._writableState.</span>bufferedRequestCount</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">process.stdout._writableState.</span>corked</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">process.stdout._writableState.</span>highWaterMark</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">process.stdout._writableState.</span>length</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">process.stdout._writableState.</span>pendingcb</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">process.stdout._writableState.</span>writelen</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">process.stdout._writableState.</span>bufferedRequest</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">process.stdout._writableState.</span>corkedRequestsFree</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">process.stdout._writableState.</span>lastBufferedRequest</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">process.stdout._writableState.</span>writecb</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">process.stdout._writableState.</span>defaultEncoding</span>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.process" id="apidoc.module.process">module process</a></h1>
+
+
+
+
+
+
+    <h2>
+        <a href="#apidoc.element.process._debugEnd" id="apidoc.element.process._debugEnd">
+        function <span class="apidocSignatureSpan">process.</span>_debugEnd
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function _debugEnd() { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.process._debugPause" id="apidoc.element.process._debugPause">
+        function <span class="apidocSignatureSpan">process.</span>_debugPause
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function _debugPause() { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.process._debugProcess" id="apidoc.element.process._debugProcess">
+        function <span class="apidocSignatureSpan">process.</span>_debugProcess
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function _debugProcess() { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.process._fatalException" id="apidoc.element.process._fatalException">
+        function <span class="apidocSignatureSpan">process.</span>_fatalException
+        <span class="apidocSignatureSpan">(er)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_fatalException = function (er) {
+  var caught;
+
+  if (process.domain &amp;&amp; process.domain._errorHandler)
+    caught = process.domain._errorHandler(er) || caught;
+
+  if (!caught)
+    caught = process.emit('uncaughtException', er);
+
+  // If someone handled it, then great.  otherwise, die in C++ land
+  // since that means that we'll exit the process, emit the 'exit' event
+  if (!caught) {
+    try {
+      if (!process._exiting) {
+        process._exiting = true;
+        process.emit('exit', 1);
+      }
+    } catch (er) {
+      // nothing to be done about it at this point.
+    }
+
+  // if we handled an error, then make sure any ticks get processed
+  } else {
+    NativeModule.require('timers').setImmediate(process._tickCallback);
+  }
+
+  return caught;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.process._getActiveHandles" id="apidoc.element.process._getActiveHandles">
+        function <span class="apidocSignatureSpan">process.</span>_getActiveHandles
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function _getActiveHandles() { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.process._getActiveRequests" id="apidoc.element.process._getActiveRequests">
+        function <span class="apidocSignatureSpan">process.</span>_getActiveRequests
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function _getActiveRequests() { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.process._kill" id="apidoc.element.process._kill">
+        function <span class="apidocSignatureSpan">process.</span>_kill
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function _kill() { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.process._linkedBinding" id="apidoc.element.process._linkedBinding">
+        function <span class="apidocSignatureSpan">process.</span>_linkedBinding
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function _linkedBinding() { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.process._rawDebug" id="apidoc.element.process._rawDebug">
+        function <span class="apidocSignatureSpan">process.</span>_rawDebug
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_rawDebug = function () {
+  rawDebug(format.apply(null, arguments));
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.process._startProfilerIdleNotifier" id="apidoc.element.process._startProfilerIdleNotifier">
+        function <span class="apidocSignatureSpan">process.</span>_startProfilerIdleNotifier
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function _startProfilerIdleNotifier() { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.process._stopProfilerIdleNotifier" id="apidoc.element.process._stopProfilerIdleNotifier">
+        function <span class="apidocSignatureSpan">process.</span>_stopProfilerIdleNotifier
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function _stopProfilerIdleNotifier() { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.process._tickCallback" id="apidoc.element.process._tickCallback">
+        function <span class="apidocSignatureSpan">process.</span>_tickCallback
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function _tickDomainCallback() {
+  var callback, domain, args, tock;
+
+  do {
+    while (tickInfo[kIndex] &lt; tickInfo[kLength]) {
+      tock = nextTickQueue[tickInfo[kIndex]++];
+      callback = tock.callback;
+      domain = tock.domain;
+      args = tock.args;
+      if (domain)
+        domain.enter();
+      // Using separate callback execution functions allows direct
+      // callback invocation with small numbers of arguments to avoid the
+      // performance hit associated with using `fn.apply()`
+      _combinedTickCallback(args, callback);
+      if (kMaxCallbacksPerLoop &lt; tickInfo[kIndex])
+        tickDone();
+      if (domain)
+        domain.exit();
+    }
+    tickDone();
+    _runMicrotasks();
+    emitPendingUnhandledRejections();
+  } while (tickInfo[kLength] !== 0);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.process._tickDomainCallback" id="apidoc.element.process._tickDomainCallback">
+        function <span class="apidocSignatureSpan">process.</span>_tickDomainCallback
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function _tickDomainCallback() {
+  var callback, domain, args, tock;
+
+  do {
+    while (tickInfo[kIndex] &lt; tickInfo[kLength]) {
+      tock = nextTickQueue[tickInfo[kIndex]++];
+      callback = tock.callback;
+      domain = tock.domain;
+      args = tock.args;
+      if (domain)
+        domain.enter();
+      // Using separate callback execution functions allows direct
+      // callback invocation with small numbers of arguments to avoid the
+      // performance hit associated with using `fn.apply()`
+      _combinedTickCallback(args, callback);
+      if (kMaxCallbacksPerLoop &lt; tickInfo[kIndex])
+        tickDone();
+      if (domain)
+        domain.exit();
+    }
+    tickDone();
+    _runMicrotasks();
+    emitPendingUnhandledRejections();
+  } while (tickInfo[kLength] !== 0);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.process.abort" id="apidoc.element.process.abort">
+        function <span class="apidocSignatureSpan">process.</span>abort
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function abort() { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.process.assert" id="apidoc.element.process.assert">
+        function <span class="apidocSignatureSpan">process.</span>assert
+        <span class="apidocSignatureSpan">(x, msg)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">assert = function (x, msg) {
+  if (!x) throw new Error(msg || 'assertion error');
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.process.binding" id="apidoc.element.process.binding">
+        function <span class="apidocSignatureSpan">process.</span>binding
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function binding() { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.process.chdir" id="apidoc.element.process.chdir">
+        function <span class="apidocSignatureSpan">process.</span>chdir
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function chdir() { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.process.cpuUsage" id="apidoc.element.process.cpuUsage">
+        function <span class="apidocSignatureSpan">process.</span>cpuUsage
+        <span class="apidocSignatureSpan">(prevValue)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function cpuUsage(prevValue) {
+  // If a previous value was passed in, ensure it has the correct shape.
+  if (prevValue) {
+    if (!previousValueIsValid(prevValue.user)) {
+      throw new TypeError('value of user property of argument is invalid');
+    }
+
+    if (!previousValueIsValid(prevValue.system)) {
+      throw new TypeError('value of system property of argument is invalid');
+    }
+  }
+
+  // Call the native function to get the current values.
+  const errmsg = _cpuUsage(cpuValues);
+  if (errmsg) {
+    throw new Error('unable to obtain CPU usage: ' + errmsg);
+  }
+
+  // If a previous value was passed in, return diff of current from previous.
+  if (prevValue) return {
+    user: cpuValues[0] - prevValue.user,
+    system: cpuValues[1] - prevValue.system
+  };
+
+  // If no previous value passed in, return current value.
+  return {
+    user: cpuValues[0],
+    system: cpuValues[1]
+  };
+
+  // Ensure that a previously passed in value is valid. Currently, the native
+  // implementation always returns numbers &lt;= Number.MAX_SAFE_INTEGER.
+  function previousValueIsValid(num) {
+    return Number.isFinite(num) &amp;&amp;
+        num &lt;= Number.MAX_SAFE_INTEGER &amp;&amp;
+        num &gt;= 0;
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.process.cwd" id="apidoc.element.process.cwd">
+        function <span class="apidocSignatureSpan">process.</span>cwd
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function cwd() { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.process.dlopen" id="apidoc.element.process.dlopen">
+        function <span class="apidocSignatureSpan">process.</span>dlopen
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function dlopen() { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.process.emitWarning" id="apidoc.element.process.emitWarning">
+        function <span class="apidocSignatureSpan">process.</span>emitWarning
+        <span class="apidocSignatureSpan">(warning, name, ctor)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">emitWarning = function (warning, name, ctor) {
+  if (typeof name === 'function') {
+    ctor = name;
+    name = 'Warning';
+  }
+  if (warning === undefined || typeof warning === 'string') {
+    warning = new Error(warning);
+    warning.name = name || 'Warning';
+    Error.captureStackTrace(warning, ctor || process.emitWarning);
+  }
+  if (!(warning instanceof Error)) {
+    throw new TypeError('\'warning\' must be an Error object or string.');
+  }
+  if (throwDeprecation &amp;&amp; warning.name === 'DeprecationWarning')
+    throw warning;
+  else
+    process.nextTick(() =&gt; process.emit('warning', warning));
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.process.exit" id="apidoc.element.process.exit">
+        function <span class="apidocSignatureSpan">process.</span>exit
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">exit = function () {
+<span class="apidocCodeCommentSpan">/*
+ * this function will do nothing
+ */
+</span>    return;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.process.getegid" id="apidoc.element.process.getegid">
+        function <span class="apidocSignatureSpan">process.</span>getegid
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function getegid() { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.process.geteuid" id="apidoc.element.process.geteuid">
+        function <span class="apidocSignatureSpan">process.</span>geteuid
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function geteuid() { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.process.getgid" id="apidoc.element.process.getgid">
+        function <span class="apidocSignatureSpan">process.</span>getgid
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function getgid() { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.process.getgroups" id="apidoc.element.process.getgroups">
+        function <span class="apidocSignatureSpan">process.</span>getgroups
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function getgroups() { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.process.getuid" id="apidoc.element.process.getuid">
+        function <span class="apidocSignatureSpan">process.</span>getuid
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function getuid() { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.process.hrtime" id="apidoc.element.process.hrtime">
+        function <span class="apidocSignatureSpan">process.</span>hrtime
+        <span class="apidocSignatureSpan">(ar)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function hrtime(ar) {
+  _hrtime(hrValues);
+
+  if (typeof ar !== 'undefined') {
+    if (Array.isArray(ar)) {
+      const sec = (hrValues[0] * 0x100000000 + hrValues[1]) - ar[0];
+      const nsec = hrValues[2] - ar[1];
+      return [nsec &lt; 0 ? sec - 1 : sec, nsec &lt; 0 ? nsec + 1e9 : nsec];
+    }
+
+    throw new TypeError('process.hrtime() only accepts an Array tuple');
+  }
+
+  return [
+    hrValues[0] * 0x100000000 + hrValues[1],
+    hrValues[2]
+  ];
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.process.initgroups" id="apidoc.element.process.initgroups">
+        function <span class="apidocSignatureSpan">process.</span>initgroups
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function initgroups() { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.process.kill" id="apidoc.element.process.kill">
+        function <span class="apidocSignatureSpan">process.</span>kill
+        <span class="apidocSignatureSpan">(pid, sig)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">kill = function (pid, sig) {
+  var err;
+
+  if (pid != (pid | 0)) {
+    throw new TypeError('invalid pid');
+  }
+
+  // preserve null signal
+  if (0 === sig) {
+    err = process._kill(pid, 0);
+  } else {
+    sig = sig || 'SIGTERM';
+    if (lazyConstants()[sig]) {
+      err = process._kill(pid, lazyConstants()[sig]);
+    } else {
+      throw new Error(`Unknown signal: ${sig}`);
+    }
+  }
+
+  if (err) {
+    const errnoException = require('util')._errnoException;
+    throw errnoException(err, 'kill');
+  }
+
+  return true;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.process.memoryUsage" id="apidoc.element.process.memoryUsage">
+        function <span class="apidocSignatureSpan">process.</span>memoryUsage
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function memoryUsage() {
+  memoryUsage_(memValues);
+  return {
+    rss: memValues[0],
+    heapTotal: memValues[1],
+    heapUsed: memValues[2],
+    external: memValues[3]
+  };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.process.nextTick" id="apidoc.element.process.nextTick">
+        function <span class="apidocSignatureSpan">process.</span>nextTick
+        <span class="apidocSignatureSpan">(callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function nextTick(callback) {
+  if (typeof callback !== 'function')
+    throw new TypeError('callback is not a function');
+  // on the way out, don't bother. it won't get fired anyway.
+  if (process._exiting)
+    return;
+
+  var args;
+  if (arguments.length &gt; 1) {
+    args = new Array(arguments.length - 1);
+    for (var i = 1; i &lt; arguments.length; i++)
+      args[i - 1] = arguments[i];
+  }
+
+  nextTickQueue.push({
+    callback,
+    domain: process.domain || null,
+    args
+  });
+  tickInfo[kLength]++;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+}
+function test (ourProcess) {
+    describe('test arguments', function () {
+        it ('works', function (done) {
+var order = 0;
+
+
+ourProcess.<span class="apidocCodeKeywordSpan">nextTick</span>(function (num) {
+    assert.equal(num, order++, 'first one works');
+    ourProcess.nextTick(function (num) {
+      assert.equal(num, order++, 'recursive one is 4th');
+    }, 3);
+}, 0);
+ourProcess.nextTick(function (num) {
+    assert.equal(num, order++, 'second one starts');
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.process.openStdin" id="apidoc.element.process.openStdin">
+        function <span class="apidocSignatureSpan">process.</span>openStdin
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">openStdin = function () {
+  process.stdin.resume();
+  return process.stdin;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.process.reallyExit" id="apidoc.element.process.reallyExit">
+        function <span class="apidocSignatureSpan">process.</span>reallyExit
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function reallyExit() { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.process.setegid" id="apidoc.element.process.setegid">
+        function <span class="apidocSignatureSpan">process.</span>setegid
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function setegid() { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.process.seteuid" id="apidoc.element.process.seteuid">
+        function <span class="apidocSignatureSpan">process.</span>seteuid
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function seteuid() { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.process.setgid" id="apidoc.element.process.setgid">
+        function <span class="apidocSignatureSpan">process.</span>setgid
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function setgid() { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.process.setgroups" id="apidoc.element.process.setgroups">
+        function <span class="apidocSignatureSpan">process.</span>setgroups
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function setgroups() { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.process.setuid" id="apidoc.element.process.setuid">
+        function <span class="apidocSignatureSpan">process.</span>setuid
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function setuid() { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.process.umask" id="apidoc.element.process.umask">
+        function <span class="apidocSignatureSpan">process.</span>umask
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function umask() { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.process.uptime" id="apidoc.element.process.uptime">
+        function <span class="apidocSignatureSpan">process.</span>uptime
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function uptime() { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.process._events" id="apidoc.module.process._events">module process._events</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.process._events.newListener" id="apidoc.element.process._events.newListener">
+        function <span class="apidocSignatureSpan">process._events.</span>newListener
+        <span class="apidocSignatureSpan">(type, listener)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">newListener = function (type, listener) {
+  if (isSignal(type) &amp;&amp;
+      !signalWraps.hasOwnProperty(type)) {
+    const Signal = process.binding('signal_wrap').Signal;
+    const wrap = new Signal();
+
+    wrap.unref();
+
+    wrap.onsignal = function() { process.emit(type); };
+
+    const signum = lazyConstants()[type];
+    const err = wrap.start(signum);
+    if (err) {
+      wrap.close();
+      const errnoException = require('util')._errnoException;
+      throw errnoException(err, 'uv_signal_start');
+    }
+
+    signalWraps[type] = wrap;
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.process._events.removeListener" id="apidoc.element.process._events.removeListener">
+        function <span class="apidocSignatureSpan">process._events.</span>removeListener
+        <span class="apidocSignatureSpan">(type, listener)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">removeListener = function (type, listener) {
+  if (signalWraps.hasOwnProperty(type) &amp;&amp; this.listenerCount(type) === 0) {
+    signalWraps[type].close();
+    delete signalWraps[type];
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.process._events.warning" id="apidoc.element.process._events.warning">
+        function <span class="apidocSignatureSpan">process._events.</span>warning
+        <span class="apidocSignatureSpan">(warning)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">(warning) =&gt; {
+  if (!(warning instanceof Error)) return;
+  const isDeprecation = warning.name === 'DeprecationWarning';
+  if (isDeprecation &amp;&amp; noDeprecation) return;
+  const trace = traceWarnings || (isDeprecation &amp;&amp; traceDeprecation);
+  if (trace &amp;&amp; warning.stack) {
+    console.error(`${prefix}${warning.stack}`);
+  } else {
+    var toString = warning.toString;
+    if (typeof toString !== 'function')
+      toString = Error.prototype.toString;
+    console.error(`${prefix}${toString.apply(warning)}`);
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.process._events.SIGWINCH" id="apidoc.module.process._events.SIGWINCH">module process._events.SIGWINCH</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.process._events.SIGWINCH.0" id="apidoc.element.process._events.SIGWINCH.0">
+        function <span class="apidocSignatureSpan">process._events.SIGWINCH.</span>0
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">() =&gt; stdout._refreshSize()</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.process._events.SIGWINCH.1" id="apidoc.element.process._events.SIGWINCH.1">
+        function <span class="apidocSignatureSpan">process._events.SIGWINCH.</span>1
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">() =&gt; stderr._refreshSize()</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.process._events.uncaughtException" id="apidoc.module.process._events.uncaughtException">module process._events.uncaughtException</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.process._events.uncaughtException.0" id="apidoc.element.process._events.uncaughtException.0">
+        function <span class="apidocSignatureSpan">process._events.uncaughtException.</span>0
+        <span class="apidocSignatureSpan">(error)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">0 = function (error) {
+    local.onErrorDefault(error);
+    if (done) {
+        return;
+    }
+    done = true;
+    // try to recover from error
+    setTimeout(onError, error &amp;&amp; local.timeoutDefault);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.process._events.uncaughtException.1" id="apidoc.element.process._events.uncaughtException.1">
+        function <span class="apidocSignatureSpan">process._events.uncaughtException.</span>1
+        <span class="apidocSignatureSpan">(error)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">1 = function (error) {
+    local.onErrorDefault(error);
+    if (done) {
+        return;
+    }
+    done = true;
+    // try to recover from error
+    setTimeout(onError, error &amp;&amp; local.timeoutDefault);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.process.browser" id="apidoc.module.process.browser">module process.browser</a></h1>
+
+
+
+
+    <h2>
+        <a href="#apidoc.element.process.browser.addListener" id="apidoc.element.process.browser.addListener">
+        function <span class="apidocSignatureSpan">process.browser.</span>addListener
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function noop() {}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.process.browser.binding" id="apidoc.element.process.browser.binding">
+        function <span class="apidocSignatureSpan">process.browser.</span>binding
+        <span class="apidocSignatureSpan">(name)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">binding = function (name) {
+    throw new Error('process.binding is not supported');
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.process.browser.chdir" id="apidoc.element.process.browser.chdir">
+        function <span class="apidocSignatureSpan">process.browser.</span>chdir
+        <span class="apidocSignatureSpan">(dir)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">chdir = function (dir) {
+    throw new Error('process.chdir is not supported');
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.process.browser.cwd" id="apidoc.element.process.browser.cwd">
+        function <span class="apidocSignatureSpan">process.browser.</span>cwd
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">cwd = function () { return '/' }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.process.browser.emit" id="apidoc.element.process.browser.emit">
+        function <span class="apidocSignatureSpan">process.browser.</span>emit
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function noop() {}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.process.browser.nextTick" id="apidoc.element.process.browser.nextTick">
+        function <span class="apidocSignatureSpan">process.browser.</span>nextTick
+        <span class="apidocSignatureSpan">(fun)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">nextTick = function (fun) {
+    var args = new Array(arguments.length - 1);
+    if (arguments.length &gt; 1) {
+        for (var i = 1; i &lt; arguments.length; i++) {
+            args[i - 1] = arguments[i];
+        }
+    }
+    queue.push(new Item(fun, args));
+    if (queue.length === 1 &amp;&amp; !draining) {
+        runTimeout(drainQueue);
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+}
+function test (ourProcess) {
+    describe('test arguments', function () {
+        it ('works', function (done) {
+var order = 0;
+
+
+ourProcess.<span class="apidocCodeKeywordSpan">nextTick</span>(function (num) {
+    assert.equal(num, order++, 'first one works');
+    ourProcess.nextTick(function (num) {
+      assert.equal(num, order++, 'recursive one is 4th');
+    }, 3);
+}, 0);
+ourProcess.nextTick(function (num) {
+    assert.equal(num, order++, 'second one starts');
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.process.browser.off" id="apidoc.element.process.browser.off">
+        function <span class="apidocSignatureSpan">process.browser.</span>off
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function noop() {}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.process.browser.on" id="apidoc.element.process.browser.on">
+        function <span class="apidocSignatureSpan">process.browser.</span>on
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function noop() {}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.process.browser.once" id="apidoc.element.process.browser.once">
+        function <span class="apidocSignatureSpan">process.browser.</span>once
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function noop() {}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    });
+});
+if (!process.browser) {
+describe('test errors', function (t) {
+    it ('works', function (done) {
+    var order = 0;
+    process.removeAllListeners('uncaughtException');
+    process.<span class="apidocCodeKeywordSpan">once</span>('uncaughtException', function(err) {
+        assert.equal(2, order++, 'error is third');
+        ourProcess.nextTick(function () {
+            assert.equal(5, order++, 'schedualed in error is last');
+            done();
+        });
+    });
+    ourProcess.nextTick(function () {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.process.browser.removeAllListeners" id="apidoc.element.process.browser.removeAllListeners">
+        function <span class="apidocSignatureSpan">process.browser.</span>removeAllListeners
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function noop() {}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+      }, 2);
+    });
+});
+if (!process.browser) {
+describe('test errors', function (t) {
+    it ('works', function (done) {
+    var order = 0;
+    process.<span class="apidocCodeKeywordSpan">removeAllListeners</span>('uncaughtException');
+    process.once('uncaughtException', function(err) {
+        assert.equal(2, order++, 'error is third');
+        ourProcess.nextTick(function () {
+            assert.equal(5, order++, 'schedualed in error is last');
+            done();
+        });
+    });
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.process.browser.removeListener" id="apidoc.element.process.browser.removeListener">
+        function <span class="apidocSignatureSpan">process.browser.</span>removeListener
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function noop() {}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.process.browser.umask" id="apidoc.element.process.browser.umask">
+        function <span class="apidocSignatureSpan">process.browser.</span>umask
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">umask = function () { return 0; }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.process.stderr" id="apidoc.module.process.stderr">module process.stderr</a></h1>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <h2>
+        <a href="#apidoc.element.process.stderr.destroy" id="apidoc.element.process.stderr.destroy">
+        function <span class="apidocSignatureSpan">process.stderr.</span>destroy
+        <span class="apidocSignatureSpan">(er)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">destroy = function (er) {
+  er = er || new Error('process.stderr cannot be closed.');
+  stderr.emit('error', er);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.process.stderr.destroySoon" id="apidoc.element.process.stderr.destroySoon">
+        function <span class="apidocSignatureSpan">process.stderr.</span>destroySoon
+        <span class="apidocSignatureSpan">(er)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">destroySoon = function (er) {
+  er = er || new Error('process.stderr cannot be closed.');
+  stderr.emit('error', er);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.process.stderr._events" id="apidoc.module.process.stderr._events">module process.stderr._events</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.process.stderr._events._socketEnd" id="apidoc.element.process.stderr._events._socketEnd">
+        function <span class="apidocSignatureSpan">process.stderr._events.</span>_socketEnd
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function onSocketEnd() {
+  // XXX Should not have to do as much crap in this function.
+  // ended should already be true, since this is called *after*
+  // the EOF errno and onread has eof'ed
+  debug('onSocketEnd', this._readableState);
+  this._readableState.ended = true;
+  if (this._readableState.endEmitted) {
+    this.readable = false;
+    maybeDestroy(this);
+  } else {
+    this.once('end', function() {
+      this.readable = false;
+      maybeDestroy(this);
+    });
+    this.read(0);
+  }
+
+  if (!this.allowHalfOpen) {
+    this.write = writeAfterFIN;
+    this.destroySoon();
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.process.stderr._events.end" id="apidoc.element.process.stderr._events.end">
+        function <span class="apidocSignatureSpan">process.stderr._events.</span>end
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function g() {
+  target.removeListener(type, g);
+  if (!fired) {
+    fired = true;
+    listener.apply(target, arguments);
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.process.stderr._events.finish" id="apidoc.element.process.stderr._events.finish">
+        function <span class="apidocSignatureSpan">process.stderr._events.</span>finish
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function onSocketFinish() {
+  // If still connecting - defer handling 'finish' until 'connect' will happen
+  if (this.connecting) {
+    debug('osF: not yet connected');
+    return this.once('connect', onSocketFinish);
+  }
+
+  debug('onSocketFinish');
+  if (!this.readable || this._readableState.ended) {
+    debug('oSF: ended, destroy', this._readableState);
+    return this.destroy();
+  }
+
+  debug('oSF: not ended, call shutdown()');
+
+  // otherwise, just shutdown, or destroy() if not possible
+  if (!this._handle || !this._handle.shutdown)
+    return this.destroy();
+
+  var req = new ShutdownWrap();
+  req.oncomplete = afterShutdown;
+  req.handle = this._handle;
+  var err = this._handle.shutdown(req);
+
+  if (err)
+    return this._destroy(errnoException(err, 'shutdown'));
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.process.stderr._handle" id="apidoc.module.process.stderr._handle">module process.stderr._handle</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.process.stderr._handle.onread" id="apidoc.element.process.stderr._handle.onread">
+        function <span class="apidocSignatureSpan">process.stderr._handle.</span>onread
+        <span class="apidocSignatureSpan">(nread, buffer)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function onread(nread, buffer) {
+  var handle = this;
+  var self = handle.owner;
+  assert(handle === self._handle, 'handle != self._handle');
+
+  self._unrefTimer();
+
+  debug('onread', nread);
+
+  if (nread &gt; 0) {
+    debug('got data');
+
+    // read success.
+    // In theory (and in practice) calling readStop right now
+    // will prevent this from being called again until _read() gets
+    // called again.
+
+    // Optimization: emit the original buffer with end points
+    var ret = self.push(buffer);
+
+    if (handle.reading &amp;&amp; !ret) {
+      handle.reading = false;
+      debug('readStop');
+      var err = handle.readStop();
+      if (err)
+        self._destroy(errnoException(err, 'read'));
+    }
+    return;
+  }
+
+  // if we didn't get any bytes, that doesn't necessarily mean EOF.
+  // wait for the next one.
+  if (nread === 0) {
+    debug('not any data, keep waiting');
+    return;
+  }
+
+  // Error, possibly EOF.
+  if (nread !== uv.UV_EOF) {
+    return self._destroy(errnoException(nread, 'read'));
+  }
+
+  debug('EOF');
+
+  // push a null to signal the end of data.
+  // Do it before `maybeDestroy` for correct order of events:
+  // `end` -&gt; `close`
+  self.push(null);
+
+  if (self._readableState.length === 0) {
+    self.readable = false;
+    maybeDestroy(self);
+  }
+
+  // internal end event so that we know that the actual socket
+  // is no longer readable, and we can start the shutdown
+  // procedure. No need to wait for all the data to be consumed.
+  self.emit('_socketEnd');
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.process.stderr._writableState" id="apidoc.module.process.stderr._writableState">module process.stderr._writableState</a></h1>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <h2>
+        <a href="#apidoc.element.process.stderr._writableState.onwrite" id="apidoc.element.process.stderr._writableState.onwrite">
+        function <span class="apidocSignatureSpan">process.stderr._writableState.</span>onwrite
+        <span class="apidocSignatureSpan">(er)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">onwrite = function (er) {
+  onwrite(stream, er);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.process.stdin" id="apidoc.module.process.stdin">module process.stdin</a></h1>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <h2>
+        <a href="#apidoc.element.process.stdin.read" id="apidoc.element.process.stdin.read">
+        function <span class="apidocSignatureSpan">process.stdin.</span>read
+        <span class="apidocSignatureSpan">(n)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">read = function (n) {
+  debug('read', n);
+  n = parseInt(n, 10);
+  var state = this._readableState;
+  var nOrig = n;
+
+  if (n !== 0)
+    state.emittedReadable = false;
+
+  // if we're doing read(0) to trigger a readable event, but we
+  // already have a bunch of data in the buffer, then just trigger
+  // the 'readable' event and move on.
+  if (n === 0 &amp;&amp;
+      state.needReadable &amp;&amp;
+      (state.length &gt;= state.highWaterMark || state.ended)) {
+    debug('read: emitReadable', state.length, state.ended);
+    if (state.length === 0 &amp;&amp; state.ended)
+      endReadable(this);
+    else
+      emitReadable(this);
+    return null;
+  }
+
+  n = howMuchToRead(n, state);
+
+  // if we've ended, and we're now clear, then finish it up.
+  if (n === 0 &amp;&amp; state.ended) {
+    if (state.length === 0)
+      endReadable(this);
+    return null;
+  }
+
+  // All the actual chunk generation logic needs to be
+  // *below* the call to _read.  The reason is that in certain
+  // synthetic stream cases, such as passthrough streams, _read
+  // may be a completely synchronous operation which may change
+  // the state of the read buffer, providing enough data when
+  // before there was *not* enough.
+  //
+  // So, the steps are:
+  // 1. Figure out what the state of things will be after we do
+  // a read from the buffer.
+  //
+  // 2. If that resulting state will trigger a _read, then call _read.
+  // Note that this may be asynchronous, or synchronous.  Yes, it is
+  // deeply ugly to write APIs this way, but that still doesn't mean
+  // that the Readable class should behave improperly, as streams are
+  // designed to be sync/async agnostic.
+  // Take note if the _read call is sync or async (ie, if the read call
+  // has returned yet), so that we know whether or not it's safe to emit
+  // 'readable' etc.
+  //
+  // 3. Actually pull the requested chunks out of the buffer and return.
+
+  // if we need a readable event, then we need to do some reading.
+  var doRead = state.needReadable;
+  debug('need readable', doRead);
+
+  // if we currently have less than the highWaterMark, then also read some
+  if (state.length === 0 || state.length - n &lt; state.highWaterMark) {
+    doRead = true;
+    debug('length less than watermark', doRead);
+  }
+
+  // however, if we've ended, then there's no point, and if we're already
+  // reading, then it's unnecessary.
+  if (state.ended || state.reading) {
+    doRead = false;
+    debug('reading or ended', doRead);
+  } else if (doRead) {
+    debug('do read');
+    state.reading = true;
+    state.sync = true;
+    // if the length is currently zero, then we *need* a readable event.
+    if (state.length === 0)
+      state.needReadable = true;
+    // call internal read method
+    this._read(state.highWaterMark);
+    state.sync = false;
+    // If _read pushed data synchronously, then `reading` will be false,
+    // and we need to re-evaluate how much data we can return to the user.
+    if (!state.reading)
+      n = howMuchToRead(nOrig, state);
+  }
+
+  var ret;
+  if (n &gt; 0)
+    ret = fromList(n, state);
+  else
+    ret = null;
+
+  if (ret === null) {
+    state.needReadable = true;
+    n = 0;
+  } else {
+    state.length -= n;
+  }
+
+  if (state.length === 0) {
+    // If we have nothing in the buffer, then we want to know
+    // as soon as we *do* get something into the buffer.
+    if (!state.ended)
+      state.needReadable = true;
+
+    // If we tried to read() past the EOF, then emit end on the next tick.
+    if (nOrig !== n &amp;&amp; state.ended)
+      endReadable(this);
+  }
+
+  if (ret !== null)
+    this.emit('data', ret);
+
+  return ret;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.process.stdin._events" id="apidoc.module.process.stdin._events">module process.stdin._events</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.process.stdin._events._socketEnd" id="apidoc.element.process.stdin._events._socketEnd">
+        function <span class="apidocSignatureSpan">process.stdin._events.</span>_socketEnd
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function onSocketEnd() {
+  // XXX Should not have to do as much crap in this function.
+  // ended should already be true, since this is called *after*
+  // the EOF errno and onread has eof'ed
+  debug('onSocketEnd', this._readableState);
+  this._readableState.ended = true;
+  if (this._readableState.endEmitted) {
+    this.readable = false;
+    maybeDestroy(this);
+  } else {
+    this.once('end', function() {
+      this.readable = false;
+      maybeDestroy(this);
+    });
+    this.read(0);
+  }
+
+  if (!this.allowHalfOpen) {
+    this.write = writeAfterFIN;
+    this.destroySoon();
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.process.stdin._events.data" id="apidoc.element.process.stdin._events.data">
+        function <span class="apidocSignatureSpan">process.stdin._events.</span>data
+        <span class="apidocSignatureSpan">(b)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function onData(b) {
+  if (stream.listenerCount('keypress') &gt; 0) {
+    var r = stream[KEYPRESS_DECODER].write(b);
+    if (r) {
+      clearTimeout(timeoutId);
+
+      if (iface) {
+        iface._sawKeyPress = r.length === 1;
+      }
+
+      for (var i = 0; i &lt; r.length; i++) {
+        if (r[i] === '\t' &amp;&amp; typeof r[i + 1] === 'string' &amp;&amp; iface) {
+          iface.isCompletionEnabled = false;
+        }
+
+        try {
+          stream[ESCAPE_DECODER].next(r[i]);
+          // Escape letter at the tail position
+          if (r[i] === '\x1b' &amp;&amp; i + 1 === r.length) {
+            timeoutId = setTimeout(escapeCodeTimeout, ESCAPE_CODE_TIMEOUT);
+          }
+        } catch (err) {
+          // if the generator throws (it could happen in the `keypress`
+          // event), we need to restart it.
+          stream[ESCAPE_DECODER] = emitKeys(stream);
+          stream[ESCAPE_DECODER].next();
+          throw err;
+        } finally {
+          if (iface) {
+            iface.isCompletionEnabled = true;
+          }
+        }
+      }
+    }
+  } else {
+    // Nobody's watching anyway
+    stream.removeListener('data', onData);
+    stream.on('newListener', onNewListener);
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.process.stdin._events.finish" id="apidoc.element.process.stdin._events.finish">
+        function <span class="apidocSignatureSpan">process.stdin._events.</span>finish
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function onSocketFinish() {
+  // If still connecting - defer handling 'finish' until 'connect' will happen
+  if (this.connecting) {
+    debug('osF: not yet connected');
+    return this.once('connect', onSocketFinish);
+  }
+
+  debug('onSocketFinish');
+  if (!this.readable || this._readableState.ended) {
+    debug('oSF: ended, destroy', this._readableState);
+    return this.destroy();
+  }
+
+  debug('oSF: not ended, call shutdown()');
+
+  // otherwise, just shutdown, or destroy() if not possible
+  if (!this._handle || !this._handle.shutdown)
+    return this.destroy();
+
+  var req = new ShutdownWrap();
+  req.oncomplete = afterShutdown;
+  req.handle = this._handle;
+  var err = this._handle.shutdown(req);
+
+  if (err)
+    return this._destroy(errnoException(err, 'shutdown'));
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.process.stdin._events.keypress" id="apidoc.element.process.stdin._events.keypress">
+        function <span class="apidocSignatureSpan">process.stdin._events.</span>keypress
+        <span class="apidocSignatureSpan">(s, key)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function onkeypress(s, key) {
+  self._ttyWrite(s, key);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.process.stdin._events.pause" id="apidoc.element.process.stdin._events.pause">
+        function <span class="apidocSignatureSpan">process.stdin._events.</span>pause
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">() =&gt; {
+  if (!stdin._handle)
+    return;
+  stdin._readableState.reading = false;
+  stdin._handle.reading = false;
+  stdin._handle.readStop();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.process.stdin._handle" id="apidoc.module.process.stdin._handle">module process.stdin._handle</a></h1>
+
+
+
+
+    <h2>
+        <a href="#apidoc.element.process.stdin._handle.onread" id="apidoc.element.process.stdin._handle.onread">
+        function <span class="apidocSignatureSpan">process.stdin._handle.</span>onread
+        <span class="apidocSignatureSpan">(nread, buffer)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function onread(nread, buffer) {
+  var handle = this;
+  var self = handle.owner;
+  assert(handle === self._handle, 'handle != self._handle');
+
+  self._unrefTimer();
+
+  debug('onread', nread);
+
+  if (nread &gt; 0) {
+    debug('got data');
+
+    // read success.
+    // In theory (and in practice) calling readStop right now
+    // will prevent this from being called again until _read() gets
+    // called again.
+
+    // Optimization: emit the original buffer with end points
+    var ret = self.push(buffer);
+
+    if (handle.reading &amp;&amp; !ret) {
+      handle.reading = false;
+      debug('readStop');
+      var err = handle.readStop();
+      if (err)
+        self._destroy(errnoException(err, 'read'));
+    }
+    return;
+  }
+
+  // if we didn't get any bytes, that doesn't necessarily mean EOF.
+  // wait for the next one.
+  if (nread === 0) {
+    debug('not any data, keep waiting');
+    return;
+  }
+
+  // Error, possibly EOF.
+  if (nread !== uv.UV_EOF) {
+    return self._destroy(errnoException(nread, 'read'));
+  }
+
+  debug('EOF');
+
+  // push a null to signal the end of data.
+  // Do it before `maybeDestroy` for correct order of events:
+  // `end` -&gt; `close`
+  self.push(null);
+
+  if (self._readableState.length === 0) {
+    self.readable = false;
+    maybeDestroy(self);
+  }
+
+  // internal end event so that we know that the actual socket
+  // is no longer readable, and we can start the shutdown
+  // procedure. No need to wait for all the data to be consumed.
+  self.emit('_socketEnd');
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.process.stdin._writableState" id="apidoc.module.process.stdin._writableState">module process.stdin._writableState</a></h1>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <h2>
+        <a href="#apidoc.element.process.stdin._writableState.onwrite" id="apidoc.element.process.stdin._writableState.onwrite">
+        function <span class="apidocSignatureSpan">process.stdin._writableState.</span>onwrite
+        <span class="apidocSignatureSpan">(er)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">onwrite = function (er) {
+  onwrite(stream, er);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.process.stdout" id="apidoc.module.process.stdout">module process.stdout</a></h1>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <h2>
+        <a href="#apidoc.element.process.stdout._write" id="apidoc.element.process.stdout._write">
+        function <span class="apidocSignatureSpan">process.stdout.</span>_write
+        <span class="apidocSignatureSpan">(chunk, encoding, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_write = function (chunk, encoding, callback) {
+    process.stdout._writeDefault(chunk, encoding, callback);
+    // coverage-hack
+    self.nop(self.socket.readable &amp;&amp; (function () {
+        self.socket.write(chunk, encoding);
+    }()));
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.process.stdout._writeDefault" id="apidoc.element.process.stdout._writeDefault">
+        function <span class="apidocSignatureSpan">process.stdout.</span>_writeDefault
+        <span class="apidocSignatureSpan">(data, encoding, cb)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_writeDefault = function (data, encoding, cb) {
+  this._writeGeneric(false, data, encoding, cb);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.process.stdout.destroy" id="apidoc.element.process.stdout.destroy">
+        function <span class="apidocSignatureSpan">process.stdout.</span>destroy
+        <span class="apidocSignatureSpan">(er)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">destroy = function (er) {
+  er = er || new Error('process.stdout cannot be closed.');
+  stdout.emit('error', er);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.process.stdout.destroySoon" id="apidoc.element.process.stdout.destroySoon">
+        function <span class="apidocSignatureSpan">process.stdout.</span>destroySoon
+        <span class="apidocSignatureSpan">(er)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">destroySoon = function (er) {
+  er = er || new Error('process.stdout cannot be closed.');
+  stdout.emit('error', er);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.process.stdout._events" id="apidoc.module.process.stdout._events">module process.stdout._events</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.process.stdout._events._socketEnd" id="apidoc.element.process.stdout._events._socketEnd">
+        function <span class="apidocSignatureSpan">process.stdout._events.</span>_socketEnd
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function onSocketEnd() {
+  // XXX Should not have to do as much crap in this function.
+  // ended should already be true, since this is called *after*
+  // the EOF errno and onread has eof'ed
+  debug('onSocketEnd', this._readableState);
+  this._readableState.ended = true;
+  if (this._readableState.endEmitted) {
+    this.readable = false;
+    maybeDestroy(this);
+  } else {
+    this.once('end', function() {
+      this.readable = false;
+      maybeDestroy(this);
+    });
+    this.read(0);
+  }
+
+  if (!this.allowHalfOpen) {
+    this.write = writeAfterFIN;
+    this.destroySoon();
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.process.stdout._events.end" id="apidoc.element.process.stdout._events.end">
+        function <span class="apidocSignatureSpan">process.stdout._events.</span>end
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function g() {
+  target.removeListener(type, g);
+  if (!fired) {
+    fired = true;
+    listener.apply(target, arguments);
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.process.stdout._events.finish" id="apidoc.element.process.stdout._events.finish">
+        function <span class="apidocSignatureSpan">process.stdout._events.</span>finish
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function onSocketFinish() {
+  // If still connecting - defer handling 'finish' until 'connect' will happen
+  if (this.connecting) {
+    debug('osF: not yet connected');
+    return this.once('connect', onSocketFinish);
+  }
+
+  debug('onSocketFinish');
+  if (!this.readable || this._readableState.ended) {
+    debug('oSF: ended, destroy', this._readableState);
+    return this.destroy();
+  }
+
+  debug('oSF: not ended, call shutdown()');
+
+  // otherwise, just shutdown, or destroy() if not possible
+  if (!this._handle || !this._handle.shutdown)
+    return this.destroy();
+
+  var req = new ShutdownWrap();
+  req.oncomplete = afterShutdown;
+  req.handle = this._handle;
+  var err = this._handle.shutdown(req);
+
+  if (err)
+    return this._destroy(errnoException(err, 'shutdown'));
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.process.stdout._events.resize" id="apidoc.element.process.stdout._events.resize">
+        function <span class="apidocSignatureSpan">process.stdout._events.</span>resize
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function onresize() {
+  self._refreshLine();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.process.stdout._handle" id="apidoc.module.process.stdout._handle">module process.stdout._handle</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.process.stdout._handle.onread" id="apidoc.element.process.stdout._handle.onread">
+        function <span class="apidocSignatureSpan">process.stdout._handle.</span>onread
+        <span class="apidocSignatureSpan">(nread, buffer)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function onread(nread, buffer) {
+  var handle = this;
+  var self = handle.owner;
+  assert(handle === self._handle, 'handle != self._handle');
+
+  self._unrefTimer();
+
+  debug('onread', nread);
+
+  if (nread &gt; 0) {
+    debug('got data');
+
+    // read success.
+    // In theory (and in practice) calling readStop right now
+    // will prevent this from being called again until _read() gets
+    // called again.
+
+    // Optimization: emit the original buffer with end points
+    var ret = self.push(buffer);
+
+    if (handle.reading &amp;&amp; !ret) {
+      handle.reading = false;
+      debug('readStop');
+      var err = handle.readStop();
+      if (err)
+        self._destroy(errnoException(err, 'read'));
+    }
+    return;
+  }
+
+  // if we didn't get any bytes, that doesn't necessarily mean EOF.
+  // wait for the next one.
+  if (nread === 0) {
+    debug('not any data, keep waiting');
+    return;
+  }
+
+  // Error, possibly EOF.
+  if (nread !== uv.UV_EOF) {
+    return self._destroy(errnoException(nread, 'read'));
+  }
+
+  debug('EOF');
+
+  // push a null to signal the end of data.
+  // Do it before `maybeDestroy` for correct order of events:
+  // `end` -&gt; `close`
+  self.push(null);
+
+  if (self._readableState.length === 0) {
+    self.readable = false;
+    maybeDestroy(self);
+  }
+
+  // internal end event so that we know that the actual socket
+  // is no longer readable, and we can start the shutdown
+  // procedure. No need to wait for all the data to be consumed.
+  self.emit('_socketEnd');
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.process.stdout._writableState" id="apidoc.module.process.stdout._writableState">module process.stdout._writableState</a></h1>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <h2>
+        <a href="#apidoc.element.process.stdout._writableState.onwrite" id="apidoc.element.process.stdout._writableState.onwrite">
+        function <span class="apidocSignatureSpan">process.stdout._writableState.</span>onwrite
+        <span class="apidocSignatureSpan">(er)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">onwrite = function (er) {
+  onwrite(stream, er);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
+</body></html>
